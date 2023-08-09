@@ -10,7 +10,8 @@ resource "aws_secretsmanager_secret_version" "secrets" {
     DB_USERNAME : module.rds.db_instance_username,
     DB_PASSWORD : module.rds.db_instance_password,
     DB_DATABASE : "${var.project}_${terraform.workspace}",
-    DB_PORT : module.rds.db_instance_port
+    DB_PORT : module.rds.db_instance_port,
+    SENDGRID_API_KEY: "SG.a"
   })
 
   lifecycle {

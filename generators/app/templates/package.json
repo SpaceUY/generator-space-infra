@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "init": "terraform -chdir=infrastructure init"
+    "init": "terraform -chdir=infrastructure init",
+    "env:front": "terraform -chdir=infrastructure output bb_frontend_deployment_variables",
+    "env:back": "terraform -chdir=infrastructure output bb_backend_deployment_variables"
   },
   "keywords": [],
   "author": "",

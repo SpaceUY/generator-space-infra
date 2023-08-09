@@ -1,5 +1,5 @@
 {
-  "name": "generator-space-infra",
+  "name": "@space-uy/generator-space-infra",
   "version": "0.0.0",
   "description": "Terraform Template for SpaceUY's Fullstack Infrastructure",
   "homepage": "",
@@ -75,6 +75,6 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "iontechnian/generator-space-infra",
+  "repository": "@space-uy/generator-space-infra",
   "license": "Apache-2.0"
 }

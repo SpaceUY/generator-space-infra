@@ -6,11 +6,15 @@ terraform {
     }
   }
 
-  backend "s3" {}
+  backend "s3" {
+    key = "terraform.tfstate"
+    profile = "<%= profile %>"
+  }
 }
 
 provider "aws" {
   region = var.region
+  profile = "<%= profile %>"
 
   default_tags {
     tags = {

@@ -1,7 +1,6 @@
 "use strict";
 const Generator = require("yeoman-generator");
 const chalk = require("chalk");
-const yosay = require("yosay");
 
 module.exports = class extends Generator {
   prompting() {
@@ -61,6 +60,7 @@ module.exports = class extends Generator {
   }
 
   configuring() {
+    this.config.set("profile", this.props.profile);
     this.config.set("project", this.props.project);
     this.config.set("region", this.props.region);
   }
@@ -80,16 +80,46 @@ module.exports = class extends Generator {
     );
     this.fs.copy(
       this.templatePath("infrastructure/**"),
-      this.destinationPath("infrastructure"),
+      this.destinationPath("infrastructure")
     );
     this.fs.copy(
-      this.templatePath("remote-state/**"),
-      this.destinationPath("remote-state")
+      this.templatePath("remote-state/outputs.tf"),
+      this.destinationPath("remote-state/outputs.tf")
+    );
+    this.fs.copy(
+      this.templatePath("remote-state/variables.tf"),
+      this.destinationPath("remote-state/variables.tf")
+    );
+    this.fs.copyTpl(
+      this.templatePath("remote-state/main.tf"),
+      this.destinationPath("remote-state/main.tf"),
+      {
+        profile: this.props.profile
+      }
+    );
+    this.fs.copyTpl(
+      this.templatePath("main.tf"),
+      this.destinationPath("infrastructure/main.tf"),
+      {
+        profile: this.props.profile
+      }
+    );
+    this.fs.copyTpl(
+      this.templatePath("terraform.tfvars"),
+      this.destinationPath("remote-state/terraform.tfvars"),
+      {
+        project: this.props.project,
+        region: this.props.region
+      }
     );
   }
 
   install() {
-    this.installDependencies();
+    this.installDependencies({
+      npm: true,
+      bower: false,
+      yarn: false
+    });
   }
 
   end() {

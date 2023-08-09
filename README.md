@@ -7,25 +7,24 @@ First, install [Yeoman](http://yeoman.io) and generator-space-infra using [npm](
 
 ```bash
 npm install -g yo
-npm install -g generator-space-infra
+npm install -g @space-uy/generator-space-infra
 ```
 
 Then generate your new project:
 
 ```bash
-yo space-infra
+yo @space-uy/space-infra
 ```
 
-## Getting To Know Yeoman
+This will ask for some simple values and then create the base files for deploying the infrastructure.
+ 
+## Deploying infrastructure
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+
 
 ## License
 
-Apache-2.0 © [Elina Garcia]()
+Apache-2.0 © [SpaceDev]()
 
 
 [npm-image]: https://badge.fury.io/js/generator-space-infra.svg
