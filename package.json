@@ -75,6 +75,6 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "@space-uy/generator-space-infra",
+  "repository": "github:SpaceUY/generator-space-infra",
   "license": "Apache-2.0"
 }
