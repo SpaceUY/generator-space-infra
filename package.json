@@ -1,6 +1,6 @@
 {
   "name": "@space-uy/generator-space-infra",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Terraform Template for SpaceUY's Fullstack Infrastructure",
   "homepage": "",
   "author": {
