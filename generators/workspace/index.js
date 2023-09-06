@@ -1,5 +1,5 @@
 "use strict";
-const WorkspaceSetup = require("../../util/workspaceSetup");
+const WorkspaceSetup = require("./workspaceSetup");
 const chalk = require("chalk");
 
 module.exports = class extends WorkspaceSetup {

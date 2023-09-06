@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 "use strict";
-const WorkspaceSetup = require("../../util/workspaceSetup");
+const WorkspaceSetup = require("./workspaceSetup");
 const chalk = require("chalk");
 const { promisify } = require("util");
 const exec = promisify(require("child_process").exec);
