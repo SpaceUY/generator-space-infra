@@ -67,7 +67,7 @@ module.exports = class extends Generator {
 
   writing() {
     this.fs.copy(
-      this.templatePath(".gitignore"),
+      this.templatePath("gitignore.txt"),
       this.destinationPath(".gitignore")
     );
     this.fs.copyTpl(

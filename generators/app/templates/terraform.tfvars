@@ -1,0 +1,2 @@
+project = "<%= project %>"
+region = "<%= region %>"
